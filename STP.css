@@ -1,0 +1,397 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #8cc461;
+  font-family: "Roboto", sans-serif;
+ 
+}
+/* header section scores  */
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 2px auto;
+  padding-top: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  padding: 1rem 1.4rem 1rem 2rem;
+}
+.score-card {
+  display: flex;
+  justify-content: space-evenly;
+  width: 400px;
+  height: 100%;
+}
+.logo {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+.score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 150px;
+  height: 100%;
+}
+.score_title {
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: #656565;
+  text-align: center;
+}
+.score_number {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #252525;
+}
+
+/* Game Section */
+
+ .game {
+ 
+  visibility: visible;
+  opacity: 1;
+  z-index: 0;
+  position: relative;
+  width: 490px;
+  height: 410px;
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.choice-btn {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+.rock {
+  height: 120px;
+  width: 120px;
+  margin-right: 60px;
+    background-color: white;
+    opacity: 100;
+    border-radius: 100px;
+    border: 16px solid #0074B6;
+    padding: 20px;
+    display: grid;
+    place-content: center;
+}
+
+
+ .scissors {
+  margin-left: 80px;
+  height: 120px;
+  width: 120px;
+  margin-left: 160px;
+    background-color: white;
+    opacity: 100;
+    border-radius: 100px;
+    border: 16px solid #BD00FF;
+    padding: 20px;
+    display: grid;
+    place-content: center;
+}
+ .paper {
+  margin-top: 30px;
+  margin-left: 15px;
+  background-color: white;
+    opacity: 100%;
+    border-radius: 100px;
+    border: 16px solid #FFA943;
+    height: 120px;
+    width: 120px;
+    display: grid;
+    place-content: center;
+}
+
+
+.rules-btn {
+  position: relative;
+
+  margin-right: 2rem;
+  float: right;
+  bottom: 1rem;
+  background: transparent;
+  outline: none;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0.6rem 2.5rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-family: inherit;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+.rules-list{
+  
+  border:6px solid white;
+  border-radius: 8px;
+  height: 350px;
+  width: 320px;
+  margin-left: 80px;
+ margin-top: 30px;
+}
+h3{
+  padding: 18px;
+  align-items: center;
+  text-align: center;
+  font-size: xx-large;
+  color: white;
+  background-color: #004429
+}
+ul{
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  padding: 25px;
+  color: white;
+ background-color: #004429;
+}
+.game-rules {
+  display: none;
+  position: fixed;
+  width: 350px;
+  height: 400px;
+  right: 1rem;
+  float: right;
+  top: 60%;
+  transform: translate(-20%, -50%);
+  z-index: 2;
+}
+
+
+.close-button {
+  position: absolute;
+  
+  margin-left: 24rem;
+  background: red;
+  border: 2px solid white;
+  border-radius: 50%;
+  font-size: 35px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  color: white;
+  text-align: center;
+}
+
+.rules-btn:focus {
+  border: 3px solid #fff;
+}
+
+#next-btn {
+  display: none;
+}
+
+/* Results */
+
+.contest {
+  width: 800px;
+  height: 410px;
+  margin: 2rem auto;
+  display: none;
+  justify-content: space-around;
+  color: #fff;
+}
+
+.handImageContainer1 {
+  
+  
+  width:120px;
+  height: 120px;
+  border-radius: 50%;
+padding: 50px;
+margin-left: 40px;
+background-color: white;
+opacity: 100;
+border-radius: 100px;
+border: 16px solid #FFA943;
+padding: 20px;
+display: grid;
+place-content: center;
+
+}
+.handImageContainer2 {
+  
+  
+  width:120px;
+  height: 120px;
+  border-radius: 50%;
+padding: 50px;
+margin-left: 40px;
+background-color: white;
+opacity: 100;
+border-radius: 100px;
+border: 16px solid #BD00FF;
+padding: 20px;
+display: grid;
+place-content: center;
+}
+
+
+
+.contest > div {
+  flex: 1;
+}
+.userhand p,
+.computerhand p {
+  font-size: 1.4rem;
+  z-index: 1;
+}
+
+.userhand,
+.computerhand {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.referee {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.newGame {
+  background-color: #fff;
+  color: #252525;
+  width: 160px;
+  height: 50px;
+  margin: 3rem;
+  padding: 18px ;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: all 0.15s;
+  letter-spacing: 1.5px;
+  font-size: 1.2rem;
+  text-align: center;
+ justify-content: center;
+}
+
+.newGame:hover {
+  background-color: #ece8e8;
+  transform: translate(0px, -4px, 0px);
+}
+
+
+.winner {
+  width: 700px;
+  height: 600px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 1rem auto;
+  /* border: 2px solid; */
+  text-align: center;
+  color: #fff;
+}
+
+.stars {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 600px;
+  height: 500px;
+  
+}
+
+.twinkling-star {
+  
+  animation: twinkling 1s ease-in forwards infinite;
+  border: 1px solid;
+  
+}
+
+.star-image {
+  position: absolute;
+  left: 10px;
+  margin-left: 80px;
+
+}
+
+.star1 {
+  top: 10px;
+  left: 400px;
+  margin-left: 80px;
+}
+
+.start2 {
+  top: 10px;
+  left: 50px; 
+}
+.star3 {
+  top: 40px;
+  left: 300px;
+}
+
+.star4 {
+  bottom: 350px;
+  left: 100px;
+}
+
+.star5 {
+  left: 400px;
+  top: 150px;
+}
+
+.star6 {
+  top: 50%;
+  left: 450px;
+}
+.star7 {
+  top: 30%;
+  left: 170px;
+}
+.star8 {
+  top: 50px;
+  left: 40px;
+}
+
+@keyframes twinkling {
+  0% {
+    opacity: 1; 
+    filter: brightness(0.5) scale(0.8);
+  }
+  50% {
+    opacity: 0;
+    filter: brightness(1) scale(1.2); 
+  }
+  100% {
+    opacity: 1; 
+    filter: brightness(0.8) scale(0.8);
+  }
+}
+
+.trophy {
+  position: absolute;
+  top: 6rem;
+}
+
+.hurray {
+  font-size: 1.8rem;
+}

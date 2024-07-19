@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stone Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet "
+      />
+    <link rel="stylesheet" href="STP.css" />
+  </head>
+  <body>
+
+    <!-- Container header  -->
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <h2>ROCK</h2>
+          <h2>PAPER</h2>
+          <h2>SCISSORS</h2>
+        </div>
+        <div class="score-card">
+          <div class="computer_score score">
+            <div class="score_title">Computer<br />Score</div>
+            <div class="score_number" id="pcscore">0</div>
+          </div>
+          <div class="your_score score">
+            <div class="score_title">Your <br />Score</div>
+            <div class="score_number" id="myscore">0</div>
+          </div>
+        </div>
+      </header>
+    </div>
+    
+    <!-- Game  -->
+    <div class="game">
+      <button class="choice-btn" onclick="yourChoice('rock')">
+        <div class="rock">
+          <img src="./IMG/ROCK.png" alt="Rock" />
+        </div>
+      </button>
+      
+      <button class="choice-btn" onclick="yourChoice('scissor')">
+        <div class="scissors">
+          <img src="./IMG/SCISSOR.png" alt="Scissors" />
+        </div>
+      </button>
+      <button class="choice-btn" onclick="yourChoice('paper')">
+        <div class="paper">
+          <img src="./IMG/PAPER.png" alt="Paper" />
+        </div>
+        
+      </button>
+    </div>
+   
+    <div class="contest">
+      <div class="userhand">
+        <p>YOU PICKED</p>
+        <div class="handImageContainer1">
+          <img id="userPickImage" src="./IMG/SCISSOR.png" />
+        </div>
+      </div>
+      <div class="referee">
+        <div class="decision">
+          <h1>YOU WIN</h1>
+          &nbsp
+          <h2>Against PC</h2>
+        </div>
+        <div class="newGame" onclick="restartGame()">Play Again</div>
+      </div>
+      <div class="computerhand">
+        <p>PC PICKED</p>
+        <div class="handImageContainer2">
+          <img id="computerPickImage" src="./IMG/ROCK.png" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Winner trophy -->
+
+    <div class="winner">
+      <div class="stars">
+        <div class="twinkling-star">
+          <img
+            src="./IMG/Star 1.png"
+            alt="Twinkling Star"
+            class="star-image star1"
+          />
+          <img
+            src="./IMG/Star 2.png"
+            alt="Twinkling Star"
+            class="star-image star2"
+          />
+          <img
+            src="./IMG/Star 3.png"
+            alt="Twinkling Star"
+            class="star-image star3"
+          />
+          <img
+            src="./IMG/Star 4.png"
+            alt="Twinkling Star"
+            class="star-image star4"
+          />
+          <img
+            src="./IMG/Star 5.png"
+            alt="Twinkling Star"
+            class="star-image star5"
+          />
+          <img
+            src="./IMG/Star 6.png"
+            alt="Twinkling Star"
+            class="star-image star6"
+          />
+          <img
+            src="./IMG/Star 7.png"
+            alt="Twinkling Star"
+            class="star-image star7"
+          />
+          <img
+            src="./IMG/Star 9.png"
+            alt="Twinkling Star"
+            class="star-image star8"
+          />
+        </div>
+        
+        <div class="trophy">
+          <img src="./IMG/Vector (2).png" alt="" />
+        </div>
+      </div>
+      <div class="hurray">
+        <h1>HURRAY !!</h1>
+        <h2>YOU WON THE GAME</h2>
+      </div>
+      <div id="playAgain" class="newGame" onclick="playAgain()">PLAY AGAIN</div>
+    </div>
+
+    <div class="game-rules">
+      <button id="closeButton" class="close-button">&times;</button>
+    
+       <div class="rules-list">
+      <h3>Game Rules</h3>
+          <ul style="list-style-type:square;" >
+            
+            <li>Rock beats scissors ,scissors beat paper,and Paper beats rock</li>
+            <li>Agree ahead of time whether you'll count off "rock,paper,scissors,shoot" or just "rock,paper ,scissors</li>
+            <li>Use rock,paper,scissors to settle minor decisions or simply play to pass the time</li>
+            <li>If both players lay down the smae hand ,each player lays down another hand</li>
+          </ul>
+        </div> 
+    </div>
+   </div>
+   
+    <!-- Rules Button -->
+    <button class="rules-btn" id="next-btn" onclick="celebrate()">NEXT</button>
+    <button class="rules-btn" id="openButton">RULES</button>
+    <script src="STP.js"></script>
+  </body>
+</html>
